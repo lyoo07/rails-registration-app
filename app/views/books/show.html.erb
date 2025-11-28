@@ -1,0 +1,11 @@
+<h1>詳細ページ</h1>
+<%= link_to '一覧', books_path, class: 'big-action-button' %>
+
+<div class='show-container'>
+    <h2><%= @book.title %></h2>
+    <%= @book.star.times do %>
+    ★
+<% end %>
+<p><%= @book.author %></p>
+<p><%= @book.impression %></p>
+</div>

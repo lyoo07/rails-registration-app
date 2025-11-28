@@ -1,0 +1,26 @@
+<h1>登録の編集</h1>
+<%= link_to "一覧", books_path %>
+
+<%= form_with model: @book, html: {class: "edit-form"} do |f| %>
+    <div>
+    <%= f.label :title, 'タイトルを入力' %><br>
+    <%= f.text_field :title, class: "input-field" %>
+    </div>
+
+    <div>
+        <%= f.label :author, 'author' %><br>
+        <%= f.text_field :author, class: "input-field" %>
+    </div>
+
+    <div>
+        <%= f.label :impression, '感想' %><br>
+        <%= f.text_area :impression, class: "textarea-field" %>
+    </div>
+
+    <div>
+        <%= f.label :star, '評価' %>
+        <%= f.number_field :star, in:1..5, class: "input-field" %>
+    </div>
+
+    <%= f.submit "編集する", class: "submit" %>
+<% end %>
