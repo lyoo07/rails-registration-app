@@ -9,7 +9,7 @@
     <div class="book-card">
         <%= link_to book.title, book_path(book), class: "book-action-link" %>
         <p>評価:
-            <%= (book.star || 0).times do %>
+            <%= (book.rating || 0).times do %>
                 ★
             <% end %>
         </p>

@@ -1,6 +1,6 @@
 document.addEventListener("turbo:load", () => {
     const stars = document.querySelectorAll(".star");
-    const ratingInput = document.getElementById("rating-vlaue");
+    const ratingInput = document.getElementById("rating-value");
 
     if (!stars.length) return;
 

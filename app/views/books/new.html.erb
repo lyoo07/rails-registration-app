@@ -3,8 +3,14 @@
     <%= link_to '一覧', books_path, class: 'new-action-link'%>
 </div>
 
+<h2><%= @book.errors.count %>件のエラーがあります。</h2>
+<ul>
+    <% @book.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+    <% end %>
+</ul>
 
-<%= form_with model: @book, html: {class: "new-form"} do |f| %>
+<%= form_with model: @book, html: {class: "new-form"}, local: true do |f| %>
     <div>
     <%= f.label :title, 'タイトルを入力' %><br>
     <%= f.text_field :title, class: 'new-input-field' %>
@@ -25,6 +31,7 @@
             <span class="star" data-value="<%= i + 1 %>">&#9733;</span>
         <% end %>
     </div>
+    <%= f.hidden_field :rating, id: "rating-value" %>
 
     <button type="submit" class="btn-flat">保存する</button>
 <% end %>
