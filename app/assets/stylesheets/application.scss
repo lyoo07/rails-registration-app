@@ -55,7 +55,7 @@
 
 .new-form {
   width: 600px;
-  height: 600px;
+  height: 650px;
   font-size: 20px;
   text-align: center;
   box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
@@ -248,4 +248,16 @@
 .star.hovered,
 .star.selected {
   color: #f5c518;
+}
+
+.book-cover-wrapper {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.book-cover {
+  max-width: 90%;
+  width: 500px;
+  height: 550px;
+  border-radius: 6px;
 }

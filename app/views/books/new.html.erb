@@ -33,5 +33,10 @@
     </div>
     <%= f.hidden_field :rating, id: "rating-value" %>
 
+    <div class="form-group">
+        <%= f.label :cover, "表示画像" %><br>
+        <%= f.file_field :cover, accept: "image/*" %>
+    </div>
+
     <button type="submit" class="btn-flat">保存する</button>
 <% end %>
